@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="static\css\style.css" />
+    <link
+      rel="shortcut icon"
+      href="./static/images/icone.png"
+      type="image/x-icon"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Stack+Sans+Headline:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>E-Parking Florianópolis</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <!-- navbar -->
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img
+              src=".\static\images\icone_e_parking.png"
+              alt="icone E-Parking"
+              class="logo"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="./pages/about_Us/about_Us.html"
+                  >Sobre nós</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="./pages/meus_estacionamentos/meus_estacionamentos.html"
+                  >Meus estacionamentos</a
+                >
+              </li>
+            </ul>
+            <form class="d-flex me-2" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="insira um endereço"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Procurar
+              </button>
+            </form>
+            <a class="btn btn-secondary" href="./pages/login/login.html"
+              >Login</a
+            >
+          </div>
+        </div>
+      </nav>
+      <div class="banner_container">
+        <h1 id="titulo">E-Parking</h1>
+      </div>
+    </header>
+
+    <!-- Conteudo principal -->
+    <main id="main_container">
+      <!-- Parte do mapa -->
+      <section>
+        <div id="map_container">
+          <img src=".\static\images/mapa.png" alt="" />
+
+          <div id="map_search" class="container">
+            <h2>Procure os estacionamentos disponíveis perto de você!</h2>
+
+            <div id="form_container">
+              <form class="row">
+                <div class="col">
+                  <label for="procurarEstacionamento" class="visually-hidden">
+                    Onde voce pretende estacionar?
+                  </label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="procurarEstacionamento"
+                    placeholder="insira o destino..."
+                  />
+                </div>
+                <div class="col-auto">
+                  <button type="submit" class="btn btn-primary mb-3">
+                    Procurar
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer -->
+
+    <div class="container mt-5">
+      <footer
+        class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"
+      >
+        <p id="flori_tm" class="col-md-4 mb-0 text-body-secondary">
+          © 2026 E-Parking, Inc
+        </p>
+        <a
+          href="/"
+          class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
+          aria-label="Bootstrap"
+        >
+          <img
+            src="./static/images/icone.png"
+            id="logo_footer"
+            class="logo"
+            alt="logo"
+          />
+        </a>
+        <ul id="footer_nav" class="nav col-md-4 justify-content-end">
+          <li class="nav-item">
+            <a
+              href="./pages/about_Us/about_Us.html"
+              class="nav-link px-2 text-body-secondary"
+              >Sobre nós</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              href="./pages/meus_estacionamentos/"
+              class="nav-link px-2 text-body-secondary"
+              >Meus estacionamentos</a
+            >
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
