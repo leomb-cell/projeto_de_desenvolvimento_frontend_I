@@ -37,6 +37,10 @@
             <td>Nicolas Barreiros</td>    
             <td><a>https://github.com/</a></td>
         </tr>
+            <tr>
+            <td>Giovana Ribero</td>    
+            <td><a>https://github.com/GiovanaRibero</a></td>
+        </tr>
     </tbody>
 </table>     
 
