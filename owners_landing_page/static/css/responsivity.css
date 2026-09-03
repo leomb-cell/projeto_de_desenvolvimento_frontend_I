@@ -51,3 +51,73 @@
   }
 
 }
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 991px) {
+
+    #hero {
+        padding: 50px 40px;
+    }
+
+    #hero h1 {
+        font-size: 40px;
+    }
+
+    .dashboard-card {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    #main_container {
+        padding: 20px;
+    }
+
+    #hero {
+        padding: 40px 25px;
+        border-radius: 18px;
+    }
+
+    #hero h1 {
+        font-size: 34px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .dashboard-info {
+        grid-template-columns: 1fr;
+    }
+
+    #cta {
+        padding: 40px 25px;
+        border-radius: 18px;
+    }
+
+    .cta-content h2 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    #hero h1 {
+        font-size: 30px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .btn-eparking,
+    .btn-outline-eparking {
+        text-align: center;
+        width: 100%;
+    }
+}
