@@ -16,4 +16,29 @@ body {
   min-height: 100vh;
 }
 
+.btn-edit {
+  background-color: #1976A8 !important;
+  color: white !important;
+  border-color: #1976A8 !important;
+}
 
+.btn-outline-exclude {
+  color: #1976A8 !important;
+  border-color: #1976A8 !important;
+}
+
+.btn-add {
+  background-color: #1976A8 !important;
+  color: white !important;
+}
+
+.btn-fechar {
+  color: #1976A8 !important;
+  border-color: #1976A8 !important;
+}
+
+.btn-confirmar {
+  background-color: #1976A8 !important;
+  color: white !important;
+  border-color: #1976A8 !important;
+}
