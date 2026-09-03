@@ -1,0 +1,53 @@
+@media (max-width: 420px) {
+  .banner_container {
+    max-height: 60px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+  }
+
+  #titulo {
+    text-align: center;
+    line-height: 60px;
+    font-size: 30px;
+    color: white;
+  }
+
+  #main_container {
+    margin: 10px auto;
+  }
+
+  #map_container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #map_container img {
+    
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 1px 5px 3px #000000;
+    box-shadow: 0px 1px 5px 3px #000000;
+  }
+
+  #map_search {
+    text-align: center;
+    margin: auto 0;
+  }
+
+  #logo_footer {
+    display: none;
+  }
+
+  footer {
+    font-size: 13px;
+  }
+
+  #flori_tm {
+    margin: 0 auto;
+  }
+
+  #footer_nav {
+    margin:0 auto;
+  }
+
+}

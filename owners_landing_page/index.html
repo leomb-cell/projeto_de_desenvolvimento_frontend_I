@@ -3,7 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Css -->
+
     <link rel="stylesheet" href="static\css\style.css" />
+    <link rel="stylesheet" href="static/css/navbar.css" />
+    <link rel="stylesheet" href="static/css/responsivity.css">
+    <link rel="stylesheet" href="static/css/font.css">
+    
     <link
       rel="shortcut icon"
       href="./static/images/icone.png"
@@ -18,12 +25,9 @@
     />
 
     <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Stack+Sans+Headline:wght@200..700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
     <title>E-Parking Florianópolis</title>
   </head>
@@ -57,6 +61,14 @@
                 <a
                   class="nav-link active"
                   aria-current="page"
+                  href="./index.html"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
                   href="./pages/about_Us/about_Us.html"
                   >Sobre nós</a
                 >
@@ -69,61 +81,20 @@
                 >
               </li>
             </ul>
-            <form class="d-flex me-2" role="search">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="insira um endereço"
-                aria-label="Search"
-              />
-              <button class="btn btn-outline-success" type="submit">
-                Procurar
-              </button>
-            </form>
-            <a class="btn btn-secondary" href="./pages/login/login.html"
+            <a id="login_btn" class="btn" href="./pages/login/login.html"
               >Login</a
+            >
+            <a id="register_btn" class="btn" href="./pages/register/resgister.html"
+              >Cadastrar</a
             >
           </div>
         </div>
       </nav>
-      <div class="banner_container">
-        <h1 id="titulo">E-Parking</h1>
-      </div>
     </header>
 
     <!-- Conteudo principal -->
     <main id="main_container">
-      <!-- Parte do mapa -->
-      <section>
-        <div id="map_container">
-          <img src=".\static\images/mapa.png" alt="" />
 
-          <div id="map_search" class="container">
-            <h2>Procure os estacionamentos disponíveis perto de você!</h2>
-
-            <div id="form_container">
-              <form class="row">
-                <div class="col">
-                  <label for="procurarEstacionamento" class="visually-hidden">
-                    Onde voce pretende estacionar?
-                  </label>
-                  <input
-                    type="password"
-                    class="form-control"
-                    id="procurarEstacionamento"
-                    placeholder="insira o destino..."
-                  />
-                </div>
-                <div class="col-auto">
-                  <button type="submit" class="btn btn-primary mb-3">
-                    Procurar
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
     </main>
 
     <!-- footer -->
