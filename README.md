@@ -105,7 +105,7 @@
         <tr>
             <td>Cor de destaque</td>    
             <td>Azul Vivo</td>
-            <td>#123B5D</td>
+            <td>#1976A8</td>
         </tr>
         <tr>
             <td>Cor de Fundo</td>    

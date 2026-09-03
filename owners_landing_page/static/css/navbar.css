@@ -1,3 +1,27 @@
+/* Geral */
+
+#nav_bar {
+    background-color: #123B5D;
+    font-size: 20px;
+}
+
+
 .logo {
-  width: 45px;
+  width: 150px;
+}
+
+/* botoes */
+
+#register_btn {
+    background-color: #1976A8;
+    color: white;
+    transition: all 0.2s ease;
+}
+
+#register_btn:hover {
+    background-color: #14597e !important;
+}
+
+#login_btn:hover{
+    color: white;
 }

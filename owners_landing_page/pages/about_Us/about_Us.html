@@ -3,7 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../../static/css/style.css" />
+    
+    <!-- Css -->
+    <link rel="stylesheet" href="../../static/css/about_us.css" />
+    <link rel="stylesheet" href="../../static/css/navbar.css" />
+    <link rel="stylesheet" href="../../static/css/responsivity.css">
+    <link rel="stylesheet" href="../../static/css/font.css">
+
     <link
       rel="shortcut icon"
       href="./static/images/icone.png"
@@ -31,12 +37,12 @@
     <!-- Header -->
     <header>
       <!-- navbar -->
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <nav id="nav_bar" class="navbar navbar-expand-lg border-bottom border-body" class="navbar " data-bs-theme="dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="../../index.html">
             <img
-              src="../../static/images/icone.png"
-              alt="icone florivagas"
+              src="../../\static\images\icone_e_parking.png"
+              alt="icone E-Parking"
               class="logo"
             />
           </a>
@@ -55,6 +61,14 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a
+                  class="nav-link"
+                  aria-current="page"
+                  href="../../index.html"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
                   class="nav-link active"
                   aria-current="page"
                   href="./about_Us.html"
@@ -69,26 +83,15 @@
                 >
               </li>
             </ul>
-            <form class="d-flex me-2" role="search">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="insira um endereço"
-                aria-label="Search"
-              />
-              <button class="btn btn-outline-success" type="submit">
-                Procurar
-              </button>
-            </form>
-            <a class="btn btn-secondary" href="../login/login.html"
+            <a id="login_btn" class="btn mx-2 " href="../login/login.html"
               >Login</a
+            >
+            <a id="register_btn" class="btn" href="../register/resgister.html"
+              >Cadastrar</a
             >
           </div>
         </div>
       </nav>
-      <div class="banner_container">
-        <h1 id="titulo">E-Parking</h1>
-      </div>
     </header>
 
     <!-- Conteudo principal -->
