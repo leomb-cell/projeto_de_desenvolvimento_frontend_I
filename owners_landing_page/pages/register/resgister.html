@@ -6,9 +6,9 @@
     <!-- css -->
     <link rel="stylesheet" href="../../static/css/register.css" />
     <link rel="stylesheet" href="../../static/css/navbar.css" />
-    <link rel="stylesheet" href="../../static/css/responsivity.css">
-    <link rel="stylesheet" href="../../static/css/font.css">
-    <link rel="stylesheet" href="../../static/css/footer.css">
+    <link rel="stylesheet" href="../../static/css/responsivity.css" />
+    <link rel="stylesheet" href="../../static/css/font.css" />
+    <link rel="stylesheet" href="../../static/css/footer.css" />
 
     <link
       rel="shortcut icon"
@@ -37,7 +37,12 @@
     <!-- Header -->
     <header>
       <!-- navbar -->
-      <nav id="nav_bar" class="navbar navbar-expand-lg border-bottom border-body" class="navbar " data-bs-theme="dark">
+      <nav
+        id="nav_bar"
+        class="navbar navbar-expand-lg border-bottom border-body"
+        class="navbar"
+        data-bs-theme="dark"
+      >
         <div class="container-fluid">
           <a class="navbar-brand" href="../../index.html">
             <img
@@ -60,10 +65,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a
-                  class="nav-link"
-                  aria-current="page"
-                  href="../../index.html"
+                <a class="nav-link" aria-current="page" href="../../index.html"
                   >Inicio</a
                 >
               </li>
@@ -83,7 +85,7 @@
                 >
               </li>
             </ul>
-            <a id="login_btn" class="btn mx-2 " href="../login/login.html"
+            <a id="login_btn" class="btn mx-2" href="../login/login.html"
               >Login</a
             >
             <a id="register_btn" class="btn" href="../register/resgister.html"
@@ -94,17 +96,99 @@
       </nav>
     </header>
 
-
     <!-- Conteudo principal -->
 
+    <main id="main_container" class="form-signin w-50 mt-5 m-auto">
+      <form>
+        <!-- Ícone -->
+        <img
+          class="mb-4 d-block mx-auto"
+          src="../../static/images/login_logo.png"
+          alt="Ícone de cadastro"
+          width="72"
+        />
 
-    <main id="main_container" class="form-signin w-50 mt-5 m-auto"> 
-    </main>   
-  
+        <!-- Título -->
+        <h1 class="h3 mb-4 fw-normal text-center">Crie sua conta</h1>
+
+        <!-- Nome -->
+        <div class="form-floating mb-2 input-container">
+          <input
+            type="text"
+            class="form-control"
+            id="floatingNome"
+            placeholder="Nome completo"
+          />
+          <label for="floatingNome">Nome completo</label>
+        </div>
+
+        <!-- E-mail -->
+        <div class="form-floating mb-2 input-container">
+          <input
+            type="email"
+            class="form-control"
+            id="floatingEmail"
+            placeholder="name@example.com"
+          />
+          <label for="floatingEmail">E-Mail</label>
+        </div>
+
+        <!-- CPF ou CNPJ -->
+        <div class="form-floating mb-2 input-container">
+          <input
+            type="text"
+            class="form-control"
+            id="floatingCPF"
+            placeholder="000.000.000-00"
+          />
+          <label for="floatingCPF">CPF</label>
+        </div>
+
+        <!-- Senha -->
+        <div class="form-floating mb-2 input-container">
+          <input
+            type="password"
+            class="form-control"
+            id="floatingSenha"
+            placeholder="Senha"
+          />
+          <label for="floatingSenha">Senha</label>
+        </div>
+
+        <!-- Confirmar senha -->
+        <div class="form-floating mb-3 input-container">
+          <input
+            type="password"
+            class="form-control"
+            id="floatingConfirmarSenha"
+            placeholder="Confirmar senha"
+          />
+          <label for="floatingConfirmarSenha">Confirmar senha</label>
+        </div>
+
+        <!-- Termos -->
+        <div class="form-check my-3 input-container">
+          <input class="form-check-input" type="checkbox" id="termos" />
+
+          <label class="form-check-label" for="termos">
+            Aceito os termos de uso
+          </label>
+        </div>
+
+        <!-- Botão -->
+        <button id="btn_cadastrar" class="btn d-block mx-auto" type="submit">
+          Cadastrar
+        </button>
+      </form>
+    </main>
 
     <!-- footer -->
 
-    <footer id="foo_ter" class="d-flex flex-wrap justify-content-between align-items-center px-3 py-3 border-top" data-bs-theme="dark" >
+    <footer
+      id="foo_ter"
+      class="d-flex flex-wrap justify-content-between align-items-center px-3 py-3 border-top"
+      data-bs-theme="dark"
+    >
       <p id="flori_tm" class="col-md-4 mb-0 text-body-secondary">
         © 2026 E-Parking, Inc
       </p>
@@ -122,13 +206,22 @@
       </a>
       <ul id="footer_nav" class="nav col-md-4 justify-content-end">
         <li class="nav-item">
-          <a href="../../index.html" class="nav-link px-2 text-body-secondary">Inicio</a>
+          <a href="../../index.html" class="nav-link px-2 text-body-secondary"
+            >Inicio</a
+          >
         </li>
         <li class="nav-item">
-          <a href="../about_Us/about_Us.html" class="nav-link px-2 text-body-secondary" >Sobre nós</a>
+          <a
+            href="../about_Us/about_Us.html"
+            class="nav-link px-2 text-body-secondary"
+            >Sobre nós</a
+          >
         </li>
         <li class="nav-item">
-          <a href="../meus_estacionamentos/meus_estacionamentos.html" class="nav-link px-2 text-body-secondary" >Meus estacionamentos</a
+          <a
+            href="../meus_estacionamentos/meus_estacionamentos.html"
+            class="nav-link px-2 text-body-secondary"
+            >Meus estacionamentos</a
           >
         </li>
       </ul>

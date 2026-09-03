@@ -16,6 +16,12 @@ body {
   margin: 0 auto;
 }
 
+
+#btn_entrar:hover {
+  background-color: #13567a;
+}
+
+
 .centralizer {
   margin: 0 auto;
 }
@@ -28,4 +34,9 @@ body {
 
 .input-container .form-control {
   width: 100%;
+}
+
+.input-container .form-control {
+  width: 100%;
+  border-radius: 15px;
 }
