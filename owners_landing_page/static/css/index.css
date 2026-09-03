@@ -180,14 +180,14 @@ body {
 
 .feature-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 10px 25px rgba(18, 59, 93, 0.08);
+    box-shadow: 0 10px 25px rgba(6, 110, 223, 0.856);
 }
 
 .feature-icon {
     width: 50px;
     height: 50px;
-    background: #EAF3F8;
-    color: #1976A8;
+
+    color: #155a80;
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -207,9 +207,7 @@ body {
     line-height: 1.6;
 }
 
-/* =========================
-   COMO FUNCIONA
-========================= */
+/* COMO FUNCIONA */
 
 .step {
     background: #F8FAFC;
@@ -242,16 +240,16 @@ body {
     line-height: 1.6;
 }
 
-/* =========================
-   CTA
-========================= */
+/* cta */
 
 #cta {
     background: #123B5D;
-    border-radius: 24px;
+    border-radius: 25px;
     padding: 60px;
-    margin-top: 40px;
+    margin: 40px auto;
     margin-bottom: 40px;
+    width: 800px;
+
 }
 
 .cta-content h2 {
@@ -270,9 +268,9 @@ body {
 .btn-eparking-light {
     display: inline-block;
     background: #FFFFFF;
-    color: #f9fbfc;
+    color: #123B5D;
     padding: 12px 25px;
-    border-radius: 8px;
+    border-radius: 15px;
     font-weight: 600;
     text-decoration: none;
     transition: 0.2s ease;
@@ -281,4 +279,8 @@ body {
 .btn-eparking-light:hover {
     background: #EAF3F8;
     color: #123B5D;
+}
+
+.parking-icon {
+  color: #123B5D;
 }

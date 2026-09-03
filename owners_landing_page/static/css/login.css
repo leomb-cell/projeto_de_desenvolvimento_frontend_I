@@ -6,7 +6,6 @@ body {
     rgba(201, 221, 245, 1) 50%,
     rgba(255, 255, 255, 1) 100%
   );
-  
 }
 
 #main_container {
@@ -16,3 +15,23 @@ body {
   padding-top: 40px;
 }
 
+#btn_entrar {
+  background-color: #1976A8;
+  color: white;
+  width: 150px;
+  margin: 0 auto;
+}
+
+.centralizer {
+  margin: 0 auto;
+}
+
+.input-container {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.input-container .form-control {
+  width: 100%;
+}

@@ -8,10 +8,10 @@
 
     <link rel="stylesheet" href="static\css\index.css" />
     <link rel="stylesheet" href="static/css/navbar.css" />
-    <link rel="stylesheet" href="static/css/responsivity.css">
-    <link rel="stylesheet" href="static/css/font.css">
-    <link rel="stylesheet" href="static/css/footer.css">
-    
+    <link rel="stylesheet" href="static/css/responsivity.css" />
+    <link rel="stylesheet" href="static/css/font.css" />
+    <link rel="stylesheet" href="static/css/footer.css" />
+
     <link
       rel="shortcut icon"
       href="./static/images/icone.png"
@@ -26,9 +26,12 @@
     />
 
     <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
 
     <title>E-Parking Florianópolis</title>
   </head>
@@ -36,7 +39,12 @@
     <!-- Header -->
     <header>
       <!-- navbar -->
-      <nav id="nav_bar" class="navbar navbar-expand-lg border-bottom border-body" class="navbar" data-bs-theme="dark">
+      <nav
+        id="nav_bar"
+        class="navbar navbar-expand-lg border-bottom border-body"
+        class="navbar"
+        data-bs-theme="dark"
+      >
         <div class="container-fluid">
           <a class="navbar-brand" href="index.html">
             <img
@@ -82,10 +90,13 @@
                 >
               </li>
             </ul>
-            <a id="login_btn" class="btn mx-2 " href="./pages/login/login.html"
+            <a id="login_btn" class="btn mx-2" href="./pages/login/login.html"
               >Login</a
             >
-            <a id="register_btn" class="btn" href="./pages/register/resgister.html"
+            <a
+              id="register_btn"
+              class="btn"
+              href="./pages/register/resgister.html"
               >Cadastrar</a
             >
           </div>
@@ -95,299 +106,319 @@
 
     <!-- Conteudo principal -->
     <main id="main_container">
-
       <!-- HERO -->
       <section id="hero">
-              <div class="row align-items-center min-vh-75">
-                  <!-- bloco de informaçoes -->
-                  <div class="col-lg-6">
-                      <h1>
-                          Tenha mais controle
-                          <span>sobre suas vagas.</span>
-                      </h1>
+        <div class="row align-items-center min-vh-75">
+          <!-- bloco de informaçoes -->
+          <div class="col-lg-6">
+            <h1>
+              Tenha mais controle
+              <span>sobre suas vagas.</span>
+            </h1>
 
-                      <p class="hero-description">
-                          Gerencie seu estacionamento em tempo real,
-                          acompanhe a ocupação das vagas e aumente sua
-                          rentabilidade com o E-Parking.
-                      </p>
-                  </div>
-                  <!-- bloco exemplo de gestão-->
-                  <div class="col-lg-6">
-                      <div class="card_container">
-                          <div class="card_header">
-                              <div>
-                                  <small>Ocupação atual</small>
-                                  <h3>Estacionamento Central</h3>
-                              </div>
-                              <span class="online-status">
-                                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/></svg> Online
-                              </span>
-                          </div>
-                          <div class="lotacao">
-                              <div class="numero_lotacao">
-                                  <strong>78%</strong>
-                                  <span>ocupado</span>
-                              </div>
-                              <div class="barra_lotacao">
-                                  <div class="prog_lotacao"></div>
-                              </div>
-                          </div>
-                          <div class="card_info_container">
-                              <div>
-                                  <small>Vagas totais</small>
-                                  <strong>120</strong>
-                              </div>
-                              <div>
-                                  <small>Ocupadas</small>
-                                  <strong>94</strong>
-                              </div>
-                              <div>
-                                  <small>Disponíveis</small>
-                                  <strong>26</strong>
-                              </div>
-                          </div>
-                          <div class="card_reserva_info_container">
-                              <div>
-                                  <i class="bi bi-calendar-check"></i>
-                              </div>
-                              <div>
-                                  <strong>8 reservas hoje</strong>
-                                  <small>
-                                      Reservas antecipadas
-                                  </small>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
+            <p class="hero-description">
+              Gerencie seu estacionamento em tempo real, acompanhe a ocupação
+              das vagas e aumente sua rentabilidade com o E-Parking.
+            </p>
           </div>
+          <!-- bloco exemplo de gestão-->
+          <div class="col-lg-6">
+            <div class="card_container">
+              <div class="card_header">
+                <div>
+                  <small>Ocupação atual</small>
+                  <h3>Estacionamento Central</h3>
+                </div>
+                <span class="online-status">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    height="10"
+                    fill="currentColor"
+                    class="bi bi-circle-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <circle cx="8" cy="8" r="8" />
+                  </svg>
+                  Online
+                </span>
+              </div>
+              <div class="lotacao">
+                <div class="numero_lotacao">
+                  <strong>78%</strong>
+                  <span>ocupado</span>
+                </div>
+                <div class="barra_lotacao">
+                  <div class="prog_lotacao"></div>
+                </div>
+              </div>
+              <div class="card_info_container">
+                <div>
+                  <small>Vagas totais</small>
+                  <strong>120</strong>
+                </div>
+                <div>
+                  <small>Ocupadas</small>
+                  <strong>94</strong>
+                </div>
+                <div>
+                  <small>Disponíveis</small>
+                  <strong>26</strong>
+                </div>
+              </div>
+              <div class="card_reserva_info_container">
+                <div>
+                  <i class="bi bi-calendar-check"></i>
+                </div>
+                <div>
+                  <strong>8 reservas hoje</strong>
+                  <small> Reservas antecipadas </small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <!-- BENEFÍCIOS -->
       <section id="beneficios">
+        <div class="container">
+          <div class="section-title text-center">
+            <span> MAIS OTIMIZAÇÃO PARA O SEU NEGÓCIO </span>
 
-          <div class="container">
+            <h2>Transforme seu estacionamento</h2>
 
-              <div class="section-title text-center">
-
-                  <span>
-                      MAIS OTIMIZAÇÃO PARA O SEU NEGÓCIO
-                  </span>
-
-                  <h2>
-                      Transforme seu estacionamento
-                  </h2>
-
-                  <p>
-                      Gerencie as informações do seu estacionamento
-                      em um único lugar.
-                  </p>
-
-              </div>
-
-
-              <div class="row g-4">
-
-                  <div class="col-md-4">
-
-                      <div class="feature-card">
-
-                          <div class="feature-icon">
-                              <i class="bi bi-bar-chart-line"></i>
-                          </div>
-
-                          <h3>
-                              Acompanhe a ocupação
-                          </h3>
-
-                          <p>
-                              Monitore a quantidade de vagas ocupadas
-                              e disponíveis em tempo real.
-                          </p>
-
-                      </div>
-
-                  </div>
-
-
-                  <div class="col-md-4">
-
-                      <div class="feature-card">
-
-                          <div class="feature-icon">
-                              <i class="bi bi-calendar-check"></i>
-                          </div>
-
-                          <h3>
-                              Receba reservas
-                          </h3>
-
-                          <p>
-                              Disponibilize suas vagas para reservas
-                              antecipadas e aumente a ocupação.
-                          </p>
-
-                      </div>
-
-                  </div>
-
-
-                  <div class="col-md-4">
-
-                      <div class="feature-card">
-
-                          <div class="feature-icon">
-                              <i class="bi bi-speedometer2"></i>
-                          </div>
-
-                          <h3>
-                              Melhore sua gestão
-                          </h3>
-
-                          <p>
-                              Tenha informações que ajudam na tomada
-                              de decisões e no controle do negócio.
-                          </p>
-
-                      </div>
-
-                  </div>
-
-              </div>
-
+            <p>
+              Gerencie as informações do seu estacionamento em um único lugar.
+            </p>
           </div>
 
-      </section>
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="feature-card">
+                <div class="feature-icon parking-icon">
+                  <svg
+                    width="36"
+                    height="36"
+                    viewBox="0 0 120 120"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-label="Carro estacionado"
+                  >
+                    <!-- Linha esquerda da vaga -->
+                    <path
+                      d="M25 15V105"
+                      stroke="currentColor"
+                      stroke-width="5"
+                      stroke-linecap="round"
+                    />
 
+                    <!-- Linha direita da vaga -->
+                    <path
+                      d="M95 15V105"
+                      stroke="currentColor"
+                      stroke-width="5"
+                      stroke-linecap="round"
+                    />
+
+                    <!-- Carro -->
+                    <path
+                      d="M60 20
+       C48 20 42 25 40 34
+       L36 52
+       V87
+       C36 97 43 102 60 102
+       C77 102 84 97 84 87
+       V52
+       L80 34
+       C78 25 72 20 60 20Z"
+                      fill="currentColor"
+                    />
+
+                    <!-- Para-brisa -->
+                    <path
+                      d="M43 39
+       C47 34 53 32 60 32
+       C67 32 73 34 77 39
+       L74 50
+       C66 48 54 48 46 50
+       L43 39Z"
+                      fill="white"
+                    />
+
+                    <!-- Janela traseira -->
+                    <path
+                      d="M45 78
+       C53 80 67 80 75 78
+       L73 90
+       C66 94 54 94 47 90
+       L45 78Z"
+                      fill="white"
+                    />
+
+                    <!-- Retrovisores -->
+                    <path
+                      d="M36 48L30 51C28 52 28 55 30 56L36 54V48Z"
+                      fill="currentColor"
+                    />
+
+                    <path
+                      d="M84 48L90 51C92 52 92 55 90 56L84 54V48Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+
+                <h3>Acompanhe a ocupação</h3>
+
+                <p>
+                  Monitore a quantidade de vagas ocupadas e disponíveis em tempo
+                  real.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="30"
+                    fill="currentColor"
+                    class="bi bi-calendar-event"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z"
+                    />
+                    <path
+                      d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"
+                    />
+                  </svg>
+                </div>
+
+                <h3>Receba reservas</h3>
+
+                <p>
+                  Disponibilize suas vagas para reservas antecipadas e aumente a
+                  ocupação.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="30"
+                    fill="currentColor"
+                    class="bi bi-bar-chart-line-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M11 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h1V7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7h1z"
+                    />
+                  </svg>
+                </div>
+
+                <h3>Melhore sua gestão</h3>
+
+                <p>
+                  Tenha informações que ajudam na tomada de decisões e no
+                  controle do negócio.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- COMO FUNCIONA -->
       <section id="como-funciona">
+        <div class="container">
+          <div class="section-title text-center">
+            <span> COMO FUNCIONA </span>
 
-          <div class="container">
+            <h2>Comece a utilizar o E-Parking</h2>
 
-              <div class="section-title text-center">
-
-                  <span>
-                      COMO FUNCIONA
-                  </span>
-
-                  <h2>
-                      Comece a utilizar o E-Parking
-                  </h2>
-
-                  <p>
-                      Coloque seu estacionamento na plataforma
-                      em poucos passos.
-                  </p>
-
-              </div>
-
-
-              <div class="row g-4 text-center">
-
-                  <div class="col-md-4">
-
-                      <div class="step">
-
-                          <div class="step-number">
-                              01
-                          </div>
-
-                          <h3>
-                              Cadastre seu estacionamento
-                          </h3>
-
-                          <p>
-                              Informe localização, preços, horários,
-                              capacidade e características do seu espaço.
-                          </p>
-
-                      </div>
-
-                  </div>
-
-
-                  <div class="col-md-4">
-
-                      <div class="step">
-
-                          <div class="step-number">
-                              02
-                          </div>
-
-                          <h3>
-                              Gerencie suas vagas
-                          </h3>
-
-                          <p>
-                              Acompanhe a ocupação e disponibilidade
-                              das vagas através da plataforma.
-                          </p>
-
-                      </div>
-
-                  </div>
-
-
-                  <div class="col-md-4">
-
-                      <div class="step">
-
-                          <div class="step-number">
-                              03
-                          </div>
-
-                          <h3>
-                              Receba mais clientes
-                          </h3>
-
-                          <p>
-                              Permita que motoristas encontrem e reservem
-                              suas vagas antecipadamente.
-                          </p>
-
-                      </div>
-
-                  </div>
-
-              </div>
-
+            <p>Coloque seu estacionamento na plataforma em poucos passos.</p>
           </div>
 
-      </section>
+          <div class="row g-4 text-center">
+            <div class="col-md-4">
+              <div class="step">
+                <div class="step-number">01</div>
 
+                <h3>Cadastre seu estacionamento</h3>
+
+                <p>
+                  Informe localização, preços, horários, capacidade e
+                  características do seu espaço.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="step">
+                <div class="step-number">02</div>
+
+                <h3>Gerencie suas vagas</h3>
+
+                <p>
+                  Acompanhe a ocupação e disponibilidade das vagas através da
+                  plataforma.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="step">
+                <div class="step-number">03</div>
+
+                <h3>Receba mais clientes</h3>
+
+                <p>
+                  Permita que motoristas encontrem e reservem suas vagas
+                  antecipadamente.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- CTA -->
       <section id="cta">
+        <div class="container">
+          <div class="cta-content text-center">
+            <h2>Potencialize seu estacionamento.</h2>
 
-          <div class="container">
+            <p>
+              Cadastre seu estabelecimento no E-Parking e tenha mais controle
+              sobre suas vagas.
+            </p>
 
-              <div class="cta-content text-center">
-
-                  <h2>
-                      Potencialize seu estacionamento.
-                  </h2>
-
-                  <p>
-                      Cadastre seu estabelecimento no E-Parking
-                      e tenha mais controle sobre suas vagas.
-                  </p>
-
-                  <a href="./pages/register/resgister.html" class="btn btn-eparking-light">
-                      Cadastre-se
-                  </a>
-
-              </div>
-
+            <a
+              href="./pages/register/resgister.html"
+              class="btn-eparking-light text-decoration-none"
+            >
+              Cadastre-se
+            </a>
           </div>
-
+        </div>
       </section>
-
     </main>
 
     <!-- footer -->
 
-    <footer id="foo_ter" class="d-flex flex-wrap justify-content-between align-items-center px-3 py-3 border-top" data-bs-theme="dark" >
+    <footer
+      id="foo_ter"
+      class="d-flex flex-wrap justify-content-between align-items-center px-3 py-3 border-top"
+      data-bs-theme="dark"
+    >
       <p id="flori_tm" class="col-md-4 mb-0 text-body-secondary">
         © 2026 E-Parking, Inc
       </p>
@@ -405,7 +436,9 @@
       </a>
       <ul id="footer_nav" class="nav col-md-4 justify-content-end">
         <li class="nav-item">
-          <a href="./index.html" class="nav-link px-2 text-body-secondary">Inicio</a>
+          <a href="./index.html" class="nav-link px-2 text-body-secondary"
+            >Inicio</a
+          >
         </li>
         <li class="nav-item">
           <a
