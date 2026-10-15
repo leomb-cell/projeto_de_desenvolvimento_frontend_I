@@ -1,5 +1,7 @@
 /* Estilos compartilhados de validação e mensagens geradas pelo JavaScript. */
 
+[hidden]{display:none !important}
+
 .field-error{display:block;margin-top:6px;font-size:12px;font-weight:600;color:#dc2626}
 .has-error input,.has-error select{border-color:#dc2626 !important;background:#fff5f5}
 
