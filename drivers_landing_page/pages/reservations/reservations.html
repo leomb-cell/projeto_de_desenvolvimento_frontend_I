@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Minhas reservas | E-Parking</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="reservations.css">
+<link rel="stylesheet" href="../../static/css/feedback.css">
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="../../index.html">E-Parking</a>
+  <nav class="links" id="sessionLinks"><a href="../../index.html">← Voltar para início</a></nav>
+</header>
+
+<main class="main">
+  <div class="container">
+    <div class="page-head">
+      <div>
+        <h1>Minhas reservas</h1>
+        <p id="subtitle">Consulte, altere ou cancele suas reservas de estacionamento.</p>
+      </div>
+      <a class="btn" href="../../index.html#buscar">+ Nova reserva</a>
+    </div>
+
+    <p id="pageMessage" class="form-message" hidden></p>
+    <div id="reservationList"></div>
+
+    <div class="empty" id="emptyState" hidden>
+      <b>Você ainda não tem reservas.</b>
+      <p>Busque um estacionamento perto do seu destino e reserve sua vaga.</p>
+      <a class="btn" href="../../index.html#buscar">Buscar vaga</a>
+    </div>
+
+    <div class="empty" id="loginRequired" hidden>
+      <b>Entre na sua conta para ver suas reservas.</b>
+      <p>As reservas ficam salvas na conta de cada motorista.</p>
+      <a class="btn" href="../login/login.html?next=..%2Freservations%2Freservations.html">Entrar</a>
+    </div>
+  </div>
+</main>
+
+<template id="reservationTemplate">
+  <article class="card">
+    <div class="top">
+      <div><b class="parking-name"></b><p class="address"></p></div>
+      <span class="status"></span>
+    </div>
+    <div class="meta">
+      <div><small>Data</small><b class="date"></b></div>
+      <div><small>Horário</small><b class="time"></b></div>
+      <div><small>Duração</small><b class="hours"></b></div>
+      <div><small>Pagamento</small><b class="payment"></b></div>
+    </div>
+
+    <form class="edit-form" novalidate hidden>
+      <label class="field"><span>Data</span><input type="date" name="date"></label>
+      <label class="field"><span>Horário</span><input type="time" name="time"></label>
+      <label class="field"><span>Duração</span>
+        <select name="hours">
+          <option value="1">1 hora</option>
+          <option value="2">2 horas</option>
+          <option value="3">3 horas</option>
+          <option value="4">4 horas</option>
+          <option value="6">6 horas</option>
+          <option value="8">8 horas</option>
+        </select>
+      </label>
+      <div class="edit-actions">
+        <span class="edit-total"></span>
+        <button type="button" class="btn outline cancel-edit">Desistir</button>
+        <button type="submit" class="btn">Salvar alterações</button>
+      </div>
+    </form>
+
+    <div class="confirm-delete" hidden>
+      <span>Cancelar esta reserva? Essa ação não pode ser desfeita.</span>
+      <div>
+        <button type="button" class="btn outline confirm-no">Voltar</button>
+        <button type="button" class="btn danger confirm-yes">Sim, cancelar</button>
+      </div>
+    </div>
+
+    <div class="bottom">
+      <span class="code-text">Código: <b class="code"></b></span>
+      <strong class="total"></strong>
+      <div class="card-actions">
+        <a class="btn outline view">Ver</a>
+        <button type="button" class="btn outline edit">Editar</button>
+        <button type="button" class="btn danger delete">Cancelar</button>
+      </div>
+    </div>
+  </article>
+</template>
+
+<script src="../../static/js/storage.js"></script>
+<script src="../../static/js/validation.js"></script>
+<script src="reservations.js"></script>
+</body>
+</html>

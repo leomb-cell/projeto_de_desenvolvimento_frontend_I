@@ -1,177 +1,95 @@
-<!doctype html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Css -->
-
-    <link rel="stylesheet" href="static\css\style.css" />
-    <link rel="stylesheet" href="static/css/navbar.css" />
-    
-    <link
-      rel="shortcut icon"
-      href="./static/images/icone.png"
-      type="image/x-icon"
-    />
-
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
-    />
-
-    <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Stack+Sans+Headline:wght@200..700&display=swap"
-      rel="stylesheet"
-    />
-
-    <title>E-Parking Florianópolis</title>
-  </head>
-  <body>
-    <!-- Header -->
-    <header>
-      <!-- navbar -->
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">
-            <img
-              src=".\static\images\icone_e_parking.png"
-              alt="icone E-Parking"
-              class="logo"
-            />
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  aria-current="page"
-                  href="./index.html"
-                  >Inicio</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  aria-current="page"
-                  href="./pages/about_Us/about_Us.html"
-                  >Sobre nós</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link"
-                  href="./pages/meus_estacionamentos/meus_estacionamentos.html"
-                  >Meus estacionamentos</a
-                >
-              </li>
-            </ul>
-            <a class="btn" href="./pages/login/login.html"
-              >Login</a
-            >
-            <a class="btn" href="./pages/register/resgister.html"
-              >Cadastrar</a
-            >
-          </div>
-        </div>
-      </nav>
-    </header>
-
-    <!-- Conteudo principal -->
-    <main id="main_container">
-      <!-- Parte do mapa -->
-      <section>
-        <div id="map_container">
-          <img src=".\static\images/mapa.png" alt="" />
-
-          <div id="map_search" class="container">
-            <h2>Procure os estacionamentos disponíveis perto de você!</h2>
-
-            <div id="form_container">
-              <form class="row">
-                <div class="col">
-                  <label for="procurarEstacionamento" class="visually-hidden">
-                    Onde voce pretende estacionar?
-                  </label>
-                  <input
-                    type="password"
-                    class="form-control"
-                    id="procurarEstacionamento"
-                    placeholder="insira o destino..."
-                  />
-                </div>
-                <div class="col-auto">
-                  <button type="submit" class="btn btn-primary mb-3">
-                    Procurar
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- footer -->
-
-    <div class="container mt-5">
-      <footer
-        class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"
-      >
-        <p id="flori_tm" class="col-md-4 mb-0 text-body-secondary">
-          © 2026 E-Parking, Inc
-        </p>
-        <a
-          href="/"
-          class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
-          aria-label="Bootstrap"
-        >
-          <img
-            src="./static/images/icone.png"
-            id="logo_footer"
-            class="logo"
-            alt="logo"
-          />
-        </a>
-        <ul id="footer_nav" class="nav col-md-4 justify-content-end">
-          <li class="nav-item">
-            <a
-              href="./pages/about_Us/about_Us.html"
-              class="nav-link px-2 text-body-secondary"
-              >Sobre nós</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              href="./pages/meus_estacionamentos/"
-              class="nav-link px-2 text-body-secondary"
-              >Meus estacionamentos</a
-            >
-          </li>
-        </ul>
-      </footer>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>E-Parking | Estacione de forma inteligente</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="static/css/index.css">
+<link rel="stylesheet" href="static/css/feedback.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="index.html">E-Parking</a>
+    <nav class="main-nav">
+      <a href="#inicio">Início</a><a href="#como">Como funciona</a><a href="#vantagens">Vantagens</a><a href="#buscar">Buscar vaga</a>
+    </nav>
+    <div class="main-actions" id="sessionLinks">
+      <a class="btn btn-outline" href="pages/login/login.html">Entrar</a>
+      <a class="btn btn-light" href="pages/register/register.html">Cadastrar</a>
     </div>
+  </div>
+</header>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+<main>
+<section class="hero" id="inicio">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow">Estacionamento inteligente</div>
+      <h1>Encontre sua vaga <span>sem perder tempo.</span></h1>
+      <p>Encontre, reserve e pague sua vaga de estacionamento de forma rápida, simples e segura.</p>
+      <div class="hero-buttons">
+        <a class="btn btn-light" href="#buscar">Encontrar uma vaga</a>
+        <a class="btn btn-outline" href="#como">Como funciona</a>
+      </div>
+    </div>
+    <div class="hero-map">
+      <i class="road r1"></i><i class="road r2"></i><i class="road r3"></i><i class="road r4"></i>
+      <i class="pin p1"></i><i class="pin p2"></i><i class="pin p3"></i><i class="pin p4"></i>
+      <div class="map-card"><b>Vaga disponível</b><span>250m de distância</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="search-wrap" id="buscar">
+  <div class="container">
+    <div class="search-card">
+      <div class="eyebrow">Encontre uma vaga</div>
+      <h2>Onde você quer estacionar?</h2>
+      <p>Informe seu destino, data e horário.</p>
+      <form class="search-grid" id="searchForm" novalidate>
+        <div class="field dest"><label for="destination">Destino</label><input id="destination" value="Centro, Florianópolis" placeholder="Bairro, rua ou ponto de referência"></div>
+        <div class="field"><label for="date">Data</label><input type="date" id="date"></div>
+        <div class="field"><label for="time">Horário</label><input type="time" id="time"></div>
+        <button class="btn btn-blue" type="submit">Procurar vagas</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="steps" id="como">
+  <div class="container">
+    <div class="section-head"><span class="eyebrow">Como funciona</span><h2>Estacione em poucos passos</h2><p>Todo o processo foi pensado para ser simples e rápido.</p></div>
+    <div class="cards3">
+      <article class="step-card"><div class="num">01</div><h3>Pesquise</h3><p>Informe seu destino e encontre os estacionamentos disponíveis próximos ao local.</p></article>
+      <article class="step-card"><div class="num">02</div><h3>Reserve</h3><p>Escolha a vaga que melhor atende às suas necessidades e faça sua reserva.</p></article>
+      <article class="step-card"><div class="num">03</div><h3>Estacione</h3><p>Chegue ao estacionamento, utilize sua reserva e aproveite uma experiência mais prática.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="benefits" id="vantagens">
+  <div class="container">
+    <div class="section-head"><span class="eyebrow">Vantagens</span><h2>Por que usar o E-Parking?</h2><p>Mais praticidade para encontrar e reservar sua vaga.</p></div>
+    <div class="cards4">
+      <article class="benefit-card"><div class="icon-box">✓</div><h3>Praticidade</h3><p>Encontre vagas sem precisar procurar estacionamento pelas ruas.</p></article>
+      <article class="benefit-card"><div class="icon-box">$</div><h3>Pagamento fácil</h3><p>Consulte o valor e realize o pagamento durante o processo de reserva.</p></article>
+      <article class="benefit-card"><div class="icon-box">★</div><h3>Avaliações</h3><p>Consulte informações e avaliações antes de escolher seu estacionamento.</p></article>
+      <article class="benefit-card"><div class="icon-box">♦</div><h3>Localização</h3><p>Encontre estacionamentos próximos ao seu destino.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="cta"><div class="container"><div class="cta-box"><div><div class="eyebrow">Pronto para começar?</div><h2>Encontre sua próxima vaga.</h2><p>Faça uma busca e descubra os estacionamentos disponíveis.</p></div><a class="btn btn-light" href="#buscar">Buscar vaga</a></div></div></section>
+</main>
+
+<footer class="footer"><div class="container"><div><strong>E-Parking</strong><span>Uma solução para facilitar a busca e reserva de vagas de estacionamento.</span></div><div>© 2026 E-Parking. Projeto acadêmico.</div></div></footer>
+
+<script src="static/js/storage.js"></script>
+<script src="static/js/validation.js"></script>
+<script src="static/js/index.js"></script>
+</body>
 </html>
