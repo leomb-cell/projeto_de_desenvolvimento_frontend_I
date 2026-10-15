@@ -1,0 +1,12 @@
+/* Estilos compartilhados de validação e mensagens geradas pelo JavaScript. */
+
+.field-error{display:block;margin-top:6px;font-size:12px;font-weight:600;color:#dc2626}
+.has-error input,.has-error select{border-color:#dc2626 !important;background:#fff5f5}
+
+.form-message{border-radius:7px;padding:11px 13px;margin:0 0 16px;font-size:13px;font-weight:600;line-height:1.45}
+.form-message.error{background:#fee2e2;color:#991b1b}
+.form-message.success{background:#dcfce7;color:#166534}
+.form-message.info{background:#e0efff;color:#1e4f86}
+.form-message a{text-decoration:underline;font-weight:800}
+
+.user-greeting{font-weight:700;opacity:.85}
