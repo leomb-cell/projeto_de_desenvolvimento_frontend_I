@@ -23,8 +23,9 @@ const sortFunctions = {
 
 function parkingUrl(parking) {
   const query = new URLSearchParams({ id: parking.id });
-  if (params.get("date")) query.set("date", params.get("date"));
-  if (params.get("time")) query.set("time", params.get("time"));
+  ["destination", "date", "time"].forEach(key => {
+    if (params.get(key)) query.set(key, params.get(key));
+  });
   return `../parking/parking.html?${query}`;
 }
 

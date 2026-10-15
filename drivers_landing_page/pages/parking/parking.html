@@ -1,12 +1,64 @@
-<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Park Center | E-Parking</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="parking.css"></head><body>
-<header class="topbar"><div class="container"><a class="back" href="../results/results.html">← Voltar para estacionamentos</a></div></header>
-<main class="wrap"><div class="container grid">
-<section class="card"><div class="map"><i class="road r1"></i><i class="road r2"></i><i class="road r3"></i><div class="pin">P</div></div><div class="content"><h1 id="parkingName">Park Center</h1><p id="address">Rua das Flores, 120 — Centro, Florianópolis</p><div class="rating">★ 4.8</div><div class="chips"><span class="chip">8 vagas disponíveis</span><span class="chip">24 horas</span><span class="chip">Acessível</span><span class="chip">Coberto</span><span class="chip">Segurança 24h</span></div><h3>Sobre o estacionamento</h3><p class="desc">O Park Center oferece vagas para motoristas que desejam estacionar com praticidade e segurança próximo ao centro de Florianópolis.</p><p class="desc">O estacionamento funciona 24 horas e possui vagas cobertas, acessibilidade e sistema de segurança.</p></div></section>
-<aside class="card booking"><h2>Fazer reserva</h2><form id="bookingForm"><div class="field"><label>Data da reserva</label><input type="date" id="date" required></div><div class="field"><label>Horário de entrada</label><input type="time" id="time" required></div><div class="field"><label>Tempo de permanência</label><select id="hours" required><option value="">Selecione</option><option value="1">1 hora</option><option value="2">2 horas</option><option value="3">3 horas</option><option value="4">4 horas</option></select></div><div class="summary"><div class="row"><span>Valor por hora</span><span id="priceText">R$ 18,00</span></div><div class="row"><span>Duração</span><span id="durationText">1 hora</span></div><div class="row total"><span>Total</span><span id="totalText">R$ 18,00</span></div></div><button class="btn">Continuar para pagamento</button><div class="note">Reserva segura • Pagamento protegido</div></form></aside>
-</div></main>
-<script>
-const q=new URLSearchParams(location.search);const parking=q.get("parking")||"Park Center";const price=Number(q.get("price"))||18;
-document.getElementById("parkingName").textContent=parking;document.getElementById("priceText").textContent=`R$ ${price.toFixed(2).replace(".",",")}`;
-const hours=document.getElementById("hours");function upd(){const h=Number(hours.value)||1;document.getElementById("durationText").textContent=h===1?"1 hora":`${h} horas`;document.getElementById("totalText").textContent=`R$ ${(price*h).toFixed(2).replace(".",",")}`;}hours.addEventListener("change",upd);
-document.getElementById("bookingForm").addEventListener("submit",e=>{e.preventDefault();const date=document.getElementById("date").value,time=document.getElementById("time").value,h=Number(hours.value);if(!date||!time||!h){alert("Preencha todos os dados da reserva.");return;}const total=price*h;location.href=`../payment/payment.html?parking=${encodeURIComponent(parking)}&date=${encodeURIComponent(date)}&time=${encodeURIComponent(time)}&hours=${h}&price=${price}&total=${total}`;});
-</script></body></html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Estacionamento | E-Parking</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="parking.css">
+<link rel="stylesheet" href="../../static/css/feedback.css">
+</head>
+<body>
+<header class="topbar"><div class="container"><a class="back" id="backLink" href="../results/results.html">← Voltar para estacionamentos</a></div></header>
+
+<main class="wrap">
+  <div class="container grid">
+    <section class="card">
+      <div class="map"><i class="road r1"></i><i class="road r2"></i><i class="road r3"></i><div class="pin">P</div></div>
+      <div class="content">
+        <h1 id="parkingName">Park Center</h1>
+        <p id="address">Rua das Flores, 120 — Centro, Florianópolis</p>
+        <div class="rating" id="rating">★ 4.8</div>
+        <div class="chips" id="chips"></div>
+        <h3>Sobre o estacionamento</h3>
+        <p class="desc" id="description"></p>
+      </div>
+    </section>
+
+    <aside class="card booking">
+      <h2>Fazer reserva</h2>
+      <form id="bookingForm" novalidate>
+        <div class="field"><label for="date">Data da reserva</label><input type="date" id="date"></div>
+        <div class="field"><label for="time">Horário de entrada</label><input type="time" id="time"></div>
+        <div class="field">
+          <label for="hours">Tempo de permanência</label>
+          <select id="hours">
+            <option value="">Selecione</option>
+            <option value="1">1 hora</option>
+            <option value="2">2 horas</option>
+            <option value="3">3 horas</option>
+            <option value="4">4 horas</option>
+            <option value="6">6 horas</option>
+            <option value="8">8 horas</option>
+          </select>
+        </div>
+        <div class="summary">
+          <div class="row"><span>Valor por hora</span><span id="priceText">R$ 18,00</span></div>
+          <div class="row"><span>Duração</span><span id="durationText">—</span></div>
+          <div class="row total"><span>Total</span><span id="totalText">—</span></div>
+        </div>
+        <button class="btn" type="submit">Continuar para pagamento</button>
+        <div class="note">Reserva segura • Pagamento protegido</div>
+      </form>
+    </aside>
+  </div>
+</main>
+
+<script src="../../static/js/storage.js"></script>
+<script src="../../static/js/validation.js"></script>
+<script src="../../static/js/parkings.js"></script>
+<script src="parking.js"></script>
+</body>
+</html>
