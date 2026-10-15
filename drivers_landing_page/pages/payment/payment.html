@@ -1,16 +1,68 @@
-<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Pagamento | E-Parking</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="payment.css"></head><body>
-<header class="nav"><a class="brand" href="../../index.html">E-Parking</a><nav class="links"><a href="../../index.html">Início</a><a href="../reservations/reservations.html">Minhas reservas</a></nav></header>
-<div class="container header"><a class="back" href="../parking/parking.html">← Voltar para reserva</a><h1>Pagamento</h1><p>Escolha a forma de pagamento para confirmar sua reserva.</p></div>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Pagamento | E-Parking</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="payment.css">
+<link rel="stylesheet" href="../../static/css/feedback.css">
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="../../index.html">E-Parking</a>
+  <nav class="links" id="sessionLinks"><a href="../../index.html">Início</a><a href="../login/login.html">Entrar</a></nav>
+</header>
+
+<div class="container header">
+  <a class="back" id="backLink" href="../parking/parking.html">← Voltar para reserva</a>
+  <h1>Pagamento</h1>
+  <p>Escolha a forma de pagamento para confirmar sua reserva.</p>
+</div>
+
 <main class="container grid">
-<section class="card"><h2>Forma de pagamento</h2><div class="methods"><button class="method active" data-method="Cartão">💳<br>Cartão</button><button class="method" data-method="PIX">◆<br>PIX</button><button class="method" data-method="Outro">$<br>Outro</button></div>
-<div id="cardFields"><div class="field"><label>Nome no cartão</label><input id="name" placeholder="Digite o nome como está no cartão"></div><div class="field"><label>Número do cartão</label><input id="number" placeholder="0000 0000 0000 0000"></div><div class="twocol"><div class="field"><label>Validade</label><input id="expiry" placeholder="MM/AA"></div><div class="field"><label>CVV</label><input id="cvv" placeholder="000"></div></div></div>
-<button id="payBtn" class="btn">Confirmar pagamento</button></section>
-<aside class="card"><h2 class="summary-title">Resumo da reserva</h2><div class="parking" id="parking">Park Center</div><div class="address">Rua das Flores, 120 — Centro, Florianópolis</div><div class="row"><span>Data</span><b id="date">—</b></div><div class="row"><span>Horário</span><b id="time">—</b></div><div class="row"><span>Duração</span><b id="hours">—</b></div><div class="row"><span>Valor por hora</span><b id="price">R$ 18,00</b></div><div class="row total"><span>Total</span><strong id="total">R$ 18,00</strong></div><div class="secure">🔒 Pagamento seguro • Reserva protegida</div></aside>
+  <section class="card">
+    <h2>Forma de pagamento</h2>
+    <p id="formMessage" class="form-message" hidden></p>
+    <div class="methods" role="group" aria-label="Forma de pagamento">
+      <button type="button" class="method active" data-method="Cartão" aria-pressed="true">💳<br>Cartão</button>
+      <button type="button" class="method" data-method="PIX" aria-pressed="false">◆<br>PIX</button>
+      <button type="button" class="method" data-method="No local" aria-pressed="false">$<br>No local</button>
+    </div>
+
+    <form id="paymentForm" novalidate>
+      <div id="cardFields">
+        <div class="field"><label for="cardName">Nome no cartão</label><input id="cardName" autocomplete="cc-name" placeholder="Digite o nome como está no cartão"></div>
+        <div class="field"><label for="cardNumber">Número do cartão</label><input id="cardNumber" inputmode="numeric" autocomplete="cc-number" placeholder="0000 0000 0000 0000"></div>
+        <div class="twocol">
+          <div class="field"><label for="cardExpiry">Validade</label><input id="cardExpiry" inputmode="numeric" autocomplete="cc-exp" placeholder="MM/AA"></div>
+          <div class="field"><label for="cardCvv">CVV</label><input id="cardCvv" inputmode="numeric" autocomplete="cc-csc" placeholder="000" maxlength="3"></div>
+        </div>
+      </div>
+      <div class="method-info" id="pixInfo" hidden>Ao confirmar, a reserva fica registrada e o QR Code do PIX é gerado para pagamento.</div>
+      <div class="method-info" id="localInfo" hidden>Você paga direto no estacionamento, na entrada. A vaga fica reservada até o horário escolhido.</div>
+      <button id="payBtn" class="btn" type="submit">Confirmar pagamento</button>
+    </form>
+  </section>
+
+  <aside class="card">
+    <h2 class="summary-title">Resumo da reserva</h2>
+    <div class="parking" id="parkingName">Park Center</div>
+    <div class="address" id="address">Rua das Flores, 120 — Centro, Florianópolis</div>
+    <div class="row"><span>Data</span><b id="date">—</b></div>
+    <div class="row"><span>Horário</span><b id="time">—</b></div>
+    <div class="row"><span>Duração</span><b id="hours">—</b></div>
+    <div class="row"><span>Valor por hora</span><b id="price">—</b></div>
+    <div class="row total"><span>Total</span><strong id="total">—</strong></div>
+    <div class="secure">🔒 Pagamento seguro • Reserva protegida</div>
+  </aside>
 </main>
-<script>
-const q=new URLSearchParams(location.search),parking=q.get("parking")||"Park Center",date=q.get("date")||"",time=q.get("time")||"",hours=Number(q.get("hours"))||1,price=Number(q.get("price"))||18,total=Number(q.get("total"))||price*hours;
-const br=v=>`R$ ${Number(v).toFixed(2).replace(".",",")}`,fd=v=>{if(!v)return"—";let p=v.split("-");return p.length===3?`${p[2]}/${p[1]}/${p[0]}`:v};
-document.getElementById("parking").textContent=parking;document.getElementById("date").textContent=fd(date);document.getElementById("time").textContent=time||"—";document.getElementById("hours").textContent=hours===1?"1 hora":`${hours} horas`;document.getElementById("price").textContent=br(price);document.getElementById("total").textContent=br(total);
-let method="Cartão";document.querySelectorAll(".method").forEach(b=>b.onclick=()=>{document.querySelectorAll(".method").forEach(x=>x.classList.remove("active"));b.classList.add("active");method=b.dataset.method;document.getElementById("cardFields").style.display=method==="Cartão"?"block":"none";});
-document.getElementById("payBtn").onclick=()=>{if(method==="Cartão"&&(!name.value||!number.value||!expiry.value||!cvv.value)){alert("Preencha os dados do cartão.");return;}location.href=`../confirmation/confirmation.html?parking=${encodeURIComponent(parking)}&date=${encodeURIComponent(date)}&time=${encodeURIComponent(time)}&hours=${hours}&price=${price}&total=${total}&payment=${encodeURIComponent(method)}`;};
-</script></body></html>
+
+<script src="../../static/js/storage.js"></script>
+<script src="../../static/js/validation.js"></script>
+<script src="../../static/js/parkings.js"></script>
+<script src="payment.js"></script>
+</body>
+</html>
