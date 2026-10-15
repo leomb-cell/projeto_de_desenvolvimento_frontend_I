@@ -1,13 +1,74 @@
-<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Vagas disponíveis | E-Parking</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="results.css"></head><body>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Vagas disponíveis | E-Parking</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="results.css">
+<link rel="stylesheet" href="../../static/css/feedback.css">
+</head>
+<body>
 <section class="top">
-<header class="nav"><a class="brand" href="../../index.html">E-Parking</a><nav class="navlinks"><a href="../../index.html">Início</a><a href="../login/login.html">Entrar</a></nav></header>
-<div class="container hero"><a class="back" href="../../index.html">← Voltar para início</a><h1>Vagas disponíveis</h1><p>Encontre o estacionamento ideal para sua viagem.</p><div class="searchbar"><b>⌕ &nbsp; Busca realizada:</b> <span id="searchText">Centro, Florianópolis</span></div></div>
+  <header class="nav">
+    <a class="brand" href="../../index.html">E-Parking</a>
+    <nav class="navlinks" id="sessionLinks"><a href="../../index.html">Início</a><a href="../login/login.html">Entrar</a></nav>
+  </header>
+  <div class="container hero">
+    <a class="back" href="../../index.html#buscar">← Voltar para início</a>
+    <h1>Vagas disponíveis</h1>
+    <p>Encontre o estacionamento ideal para sua viagem.</p>
+    <div class="searchbar"><b>⌕ &nbsp; Busca realizada:</b> <span id="searchText">Centro, Florianópolis</span></div>
+  </div>
 </section>
-<main class="main"><div class="container"><div class="main-head"><h2>Estacionamentos encontrados</h2><span>3 opções encontradas</span></div><div class="list">
-<article class="card"><div><h3>Park Center</h3><p>Rua das Flores, 120 — Centro</p><div class="chips"><span class="chip available">8 vagas disponíveis</span><span class="chip">24 horas</span><span class="chip">Acessível</span><span class="chip">Coberto</span></div><div class="rating"><b>★ 4.8</b> Excelente avaliação</div></div><div class="price"><small>A partir de</small><br><strong>R$ 18</strong><span>/hora</span><br><a class="btn" href="../parking/parking.html?parking=Park%20Center&price=18">Ver estacionamento</a></div></article>
-<article class="card"><div><h3>Centro Park</h3><p>Avenida Central, 450 — Centro</p><div class="chips"><span class="chip available">12 vagas disponíveis</span><span class="chip">06h às 00h</span><span class="chip">Coberto</span></div><div class="rating"><b>★ 4.6</b> Muito bem avaliado</div></div><div class="price"><small>A partir de</small><br><strong>R$ 15</strong><span>/hora</span><br><a class="btn" href="../parking/parking.html?parking=Centro%20Park&price=15">Ver estacionamento</a></div></article>
-<article class="card"><div><h3>Park Sul</h3><p>Rua do Comércio, 85 — Centro</p><div class="chips"><span class="chip available">5 vagas disponíveis</span><span class="chip">24 horas</span><span class="chip">Segurança 24h</span></div><div class="rating"><b>★ 4.7</b> Excelente avaliação</div></div><div class="price"><small>A partir de</small><br><strong>R$ 16</strong><span>/hora</span><br><a class="btn" href="../parking/parking.html?parking=Park%20Sul&price=16">Ver estacionamento</a></div></article>
-</div></div></main>
-<script>
-const q=new URLSearchParams(location.search);const d=q.get("destination");if(d)document.getElementById("searchText").textContent=d;
-</script></body></html>
+
+<main class="main">
+  <div class="container">
+    <div class="main-head">
+      <h2>Estacionamentos encontrados</h2>
+      <span id="resultCount">0 opções encontradas</span>
+    </div>
+
+    <div class="toolbar">
+      <div class="filters" role="group" aria-label="Filtrar estacionamentos">
+        <button type="button" class="filter" data-feature="Coberto" aria-pressed="false">Coberto</button>
+        <button type="button" class="filter" data-feature="24 horas" aria-pressed="false">24 horas</button>
+        <button type="button" class="filter" data-feature="Acessível" aria-pressed="false">Acessível</button>
+      </div>
+      <label class="sort">Ordenar por
+        <select id="sortSelect">
+          <option value="rating">Melhor avaliação</option>
+          <option value="price">Menor preço</option>
+          <option value="spots">Mais vagas</option>
+        </select>
+      </label>
+    </div>
+
+    <div class="list" id="parkingList"></div>
+    <p class="empty" id="emptyMessage" hidden>Nenhum estacionamento atende a esses filtros. Tente remover algum filtro.</p>
+  </div>
+</main>
+
+<template id="parkingCardTemplate">
+  <article class="card">
+    <div>
+      <h3 class="parking-name"></h3>
+      <p class="parking-address"></p>
+      <div class="chips"></div>
+      <div class="rating"><b class="rating-value"></b> <span class="rating-label"></span></div>
+    </div>
+    <div class="price">
+      <small>A partir de</small><br>
+      <strong class="price-value"></strong><span>/hora</span><br>
+      <a class="btn">Ver estacionamento</a>
+    </div>
+  </article>
+</template>
+
+<script src="../../static/js/storage.js"></script>
+<script src="../../static/js/parkings.js"></script>
+<script src="results.js"></script>
+</body>
+</html>
