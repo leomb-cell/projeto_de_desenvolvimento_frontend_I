@@ -99,3 +99,10 @@ a{text-decoration:none;color:inherit}
   .search-grid,.cards3,.cards4{grid-template-columns:1fr}
   .search-grid .dest{grid-column:auto}.cta-box,.footer .container{flex-direction:column;align-items:flex-start}
 }
+
+.cta .eyebrow{color:#eaf3ff}
+.main-actions .user-greeting{align-self:center;font-size:12px;color:#d0deec}
+.main-actions a:not(.btn){display:inline-flex;align-items:center;font-size:12px;font-weight:700;padding:10px 4px}
+.search-grid{row-gap:30px}
+.search-card .field{position:relative}
+.search-card .field-error{position:absolute;top:100%;left:0;color:#ffc9c9}

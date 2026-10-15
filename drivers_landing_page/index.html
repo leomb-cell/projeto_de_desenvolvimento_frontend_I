@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="static/css/index.css">
+<link rel="stylesheet" href="static/css/feedback.css">
 </head>
 <body>
 <header class="site-header">
@@ -16,7 +17,7 @@
     <nav class="main-nav">
       <a href="#inicio">Início</a><a href="#como">Como funciona</a><a href="#vantagens">Vantagens</a><a href="#buscar">Buscar vaga</a>
     </nav>
-    <div class="main-actions">
+    <div class="main-actions" id="sessionLinks">
       <a class="btn btn-outline" href="pages/login/login.html">Entrar</a>
       <a class="btn btn-light" href="pages/register/register.html">Cadastrar</a>
     </div>
@@ -49,10 +50,10 @@
       <div class="eyebrow">Encontre uma vaga</div>
       <h2>Onde você quer estacionar?</h2>
       <p>Informe seu destino, data e horário.</p>
-      <form class="search-grid" id="searchForm">
-        <div class="field dest"><label>Destino</label><input id="destination" value="Centro, Florianópolis" required></div>
-        <div class="field"><label>Data</label><input type="date" id="date" required></div>
-        <div class="field"><label>Horário</label><input type="time" id="time" required></div>
+      <form class="search-grid" id="searchForm" novalidate>
+        <div class="field dest"><label for="destination">Destino</label><input id="destination" value="Centro, Florianópolis" placeholder="Bairro, rua ou ponto de referência"></div>
+        <div class="field"><label for="date">Data</label><input type="date" id="date"></div>
+        <div class="field"><label for="time">Horário</label><input type="time" id="time"></div>
         <button class="btn btn-blue" type="submit">Procurar vagas</button>
       </form>
     </div>
@@ -82,20 +83,13 @@
   </div>
 </section>
 
-<section class="cta"><div class="container"><div class="cta-box"><div><div class="eyebrow" style="color:#eaf3ff">Pronto para começar?</div><h2>Encontre sua próxima vaga.</h2><p>Faça uma busca e descubra os estacionamentos disponíveis.</p></div><a class="btn btn-light" href="#buscar">Buscar vaga</a></div></div></section>
+<section class="cta"><div class="container"><div class="cta-box"><div><div class="eyebrow">Pronto para começar?</div><h2>Encontre sua próxima vaga.</h2><p>Faça uma busca e descubra os estacionamentos disponíveis.</p></div><a class="btn btn-light" href="#buscar">Buscar vaga</a></div></div></section>
 </main>
 
 <footer class="footer"><div class="container"><div><strong>E-Parking</strong><span>Uma solução para facilitar a busca e reserva de vagas de estacionamento.</span></div><div>© 2026 E-Parking. Projeto acadêmico.</div></div></footer>
 
-<script>
-document.getElementById("searchForm").addEventListener("submit",function(e){
-  e.preventDefault();
-  const destination=document.getElementById("destination").value.trim();
-  const date=document.getElementById("date").value;
-  const time=document.getElementById("time").value;
-  if(!destination||!date||!time){alert("Preencha destino, data e horário.");return;}
-  location.href=`pages/results/results.html?destination=${encodeURIComponent(destination)}&date=${encodeURIComponent(date)}&time=${encodeURIComponent(time)}`;
-});
-</script>
+<script src="static/js/storage.js"></script>
+<script src="static/js/validation.js"></script>
+<script src="static/js/index.js"></script>
 </body>
 </html>
