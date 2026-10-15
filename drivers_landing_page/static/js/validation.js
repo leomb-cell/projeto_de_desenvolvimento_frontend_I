@@ -108,3 +108,12 @@ function showMessage(element, text, type = "error") {
   element.className = `form-message ${type}`;
   element.hidden = false;
 }
+
+// Assim que o usuário mexe em um campo com erro, a mensagem daquele campo some.
+document.addEventListener("input", event => {
+  const field = event.target.closest(".field.has-error");
+  if (!field) return;
+  field.classList.remove("has-error");
+  field.querySelector(".field-error")?.remove();
+  event.target.removeAttribute("aria-invalid");
+});
