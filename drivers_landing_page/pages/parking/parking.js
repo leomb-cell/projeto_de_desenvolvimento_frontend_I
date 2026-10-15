@@ -40,7 +40,7 @@ function dateError(date) {
 
 function timeError(date, time) {
   if (!time) return "Escolha o horário de entrada.";
-  if (date && isDateTimeInPast(date, time)) return "Esse horário já passou.";
+  if (date === todayISO() && isDateTimeInPast(date, time)) return "Esse horário já passou.";
   return "";
 }
 

@@ -26,7 +26,7 @@ function editErrors(form) {
 
   let timeMessage = "";
   if (!time) timeMessage = "Escolha o horário.";
-  else if (date && isDateTimeInPast(date, time)) timeMessage = "Esse horário já passou.";
+  else if (date === todayISO() && isDateTimeInPast(date, time)) timeMessage = "Esse horário já passou.";
 
   return [[dateInput, dateMessage], [timeInput, timeMessage]];
 }
