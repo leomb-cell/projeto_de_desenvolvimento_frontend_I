@@ -1,0 +1,36 @@
+.main-title {
+  color: #12466a !important;
+  font-weight: 700;
+}
+
+.plate-text {
+  color: #185a9d !important;
+  font-weight: 600;
+}
+
+.money-value {
+  color: #28a745 !important;
+  font-weight: 600;
+}
+
+.bg-soft-blue {
+  background-color: #d6eaf8 !important;
+  border: 1px solid rgba(15, 41, 66, 0.15);
+}
+
+.form-control {
+  border-color: #cbd5e1;
+}
+
+.form-control:focus {
+  border-color: #185a9d;
+  box-shadow: 0 0 0 0.2rem rgba(24, 90, 157, 0.25);
+}
+
+.btn-csv {
+    background-color: #1982b8 !important;
+}
+
+.btn-csv:hover {
+    background-color: #185b9db1;
+}

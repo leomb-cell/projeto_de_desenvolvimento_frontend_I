@@ -38,61 +38,12 @@
     <!-- Header -->
     <header>
       <!-- navbar -->
-      <nav
-        id="nav_bar"
-        class="navbar navbar-expand-lg border-bottom border-body"
-        class="navbar"
-        data-bs-theme="dark"
-      >
-        <div class="container-fluid">
-          <a class="navbar-brand" href="../../index.html">
-            <img
-              src="../../static\images\icone_e_parking.png"
-              alt="icone E-Parking"
-              class="logo"
-            />
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="../../index.html"
-                  >Inicio</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link"
-                  aria-current="page"
-                  href="../about_Us/about_Us.html"
-                  >Sobre nós</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="./meus_estacionamentos.html"
-                  >Meus estacionamentos</a
-                >
-              </li>
-            </ul>
-            <a id="login_btn" class="btn mx-2" href="../login/login.html"
-              >Login</a
-            >
-            <a id="register_btn" class="btn" href="../register/resgister.html"
-              >Cadastrar</a
-            >
-          </div>
-        </div>
-      </nav>
+      <custom-navbar
+        logo="../../static/images/icone_e_parking.png"
+        cssSrc="../../static/css/navbar.css"
+        base="../../"
+        active="sobre"
+      ></custom-navbar>
     </header>
 
     <!-- Conteudo principal -->
@@ -152,7 +103,9 @@
                     id="totalVagas"
                   ></textarea>
                 </div>
-                <button type="submit" class="btn btn-confirmar">Confirmar</button>
+                <button type="submit" class="btn btn-confirmar">
+                  Confirmar
+                </button>
               </form>
             </div>
             <div class="modal-footer">
@@ -163,7 +116,6 @@
               >
                 Fechar
               </button>
-
             </div>
           </div>
         </div>
@@ -186,48 +138,19 @@
 
     <!-- footer -->
 
-    <footer
-      id="foo_ter"
-      class="d-flex flex-wrap justify-content-between align-items-center px-3 py-3 border-top"
-      data-bs-theme="dark"
-    >
-      <p id="flori_tm" class="col-md-4 mb-0 text-body-secondary">
-        © 2026 E-Parking, Inc
-      </p>
-      <a
-        href="/"
-        class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
-        aria-label="Bootstrap"
-      >
-        <img
-          src="../../static/images/icone_e_parking.png"
-          id="logo_footer"
-          class="logo"
-          alt="logo"
-        />
-      </a>
-      <ul id="footer_nav" class="nav col-md-4 justify-content-end">
-        <li class="nav-item">
-          <a href="../../index.html" class="nav-link px-2 text-body-secondary"
-            >Inicio</a
-          >
-        </li>
-        <li class="nav-item">
-          <a href="./about_Us.html" class="nav-link px-2 text-body-secondary"
-            >Sobre nós</a
-          >
-        </li>
-        <li class="nav-item">
-          <a
-            href="../meus_estacionamentos/meus_estacionamentos.html"
-            class="nav-link px-2 text-body-secondary"
-            >Meus estacionamentos</a
-          >
-        </li>
-      </ul>
-    </footer>
+    <custom-footer
+      logo="../../static/images/icone_e_parking.png"
+      cssSrc="static/css/footer.css"
+      base="../../"
+    ></custom-footer>
+
+    <!-- Scripts -->
+
+    <script src="../../static/components/navbar.js"></script>
 
     <script src="./meus_estacionamentos.js"></script>
+
+    <script src="../../static/components/footer.js"></script>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"

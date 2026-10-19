@@ -8,9 +8,9 @@
 
     <link rel="stylesheet" href="static\css\index.css" />
     <link rel="stylesheet" href="static/css/navbar.css" />
-    <link rel="stylesheet" href="static/css/responsivity.css">
-    <link rel="stylesheet" href="static/css/font.css">
-    <link rel="stylesheet" href="static/css/footer.css">
+    <link rel="stylesheet" href="static/css/responsivity.css" />
+    <link rel="stylesheet" href="static/css/font.css" />
+    <link rel="stylesheet" href="static/css/footer.css" />
 
     <link
       rel="shortcut icon"
@@ -38,70 +38,11 @@
   <body>
     <!-- Header -->
     <header>
-      <!-- navbar -->
-      <nav
-        id="nav_bar"
-        class="navbar navbar-expand-lg border-bottom border-body"
-        class="navbar"
-        data-bs-theme="dark"
-      >
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">
-            <img
-              src=".\static\images\icone_e_parking.png"
-              alt="icone E-Parking"
-              class="logo"
-            />
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  aria-current="page"
-                  href="./index.html"
-                  >Inicio</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link"
-                  aria-current="page"
-                  href="./pages/about_Us/about_Us.html"
-                  >Sobre nós</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link"
-                  href="./pages/meus_estacionamentos/meus_estacionamentos.html"
-                  >Meus estacionamentos</a
-                >
-              </li>
-            </ul>
-            <a id="login_btn" class="btn mx-2" href="./pages/login/login.html"
-              >Login</a
-            >
-            <a
-              id="register_btn"
-              class="btn"
-              href="./pages/register/resgister.html"
-              >Cadastrar</a
-            >
-          </div>
-        </div>
-      </nav>
+      <custom-navbar
+        logo="./static/images/icone_e_parking.png"
+        cssSrc="static/css/navbar.css"
+        active="inicio"
+      ></custom-navbar>
     </header>
 
     <!-- Conteudo principal -->
@@ -413,7 +354,7 @@
     </main>
 
     <!-- footer -->
-
+    <!--
     <footer
       id="foo_ter"
       class="d-flex flex-wrap justify-content-between align-items-center px-3 py-3 border-top"
@@ -455,7 +396,12 @@
           >
         </li>
       </ul>
-    </footer>
+    </footer> -->
+
+    <custom-footer
+      logo="./static/images/icone_e_parking.png"
+      cssSrc="static/css/footer.css"
+    ></custom-footer>
 
     <!-- Scripts -->
 
@@ -464,5 +410,9 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+
+    <script src="./static/components/footer.js"></script>
+
+    <script src="./static/components/navbar.js"></script>
   </body>
 </html>
