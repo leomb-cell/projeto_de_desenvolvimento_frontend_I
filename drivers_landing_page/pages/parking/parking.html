@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Estacionamento | E-Parking</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="parking.css">
+<link rel="stylesheet" href="../../static/css/feedback.css">
+</head>
+<body>
+<header class="topbar"><div class="container"><a class="back" id="backLink" href="../results/results.html">← Voltar para estacionamentos</a></div></header>
+
+<main class="wrap">
+  <div class="container grid">
+    <section class="card">
+      <div class="map"><i class="road r1"></i><i class="road r2"></i><i class="road r3"></i><div class="pin">P</div></div>
+      <div class="content">
+        <h1 id="parkingName">Park Center</h1>
+        <p id="address">Rua das Flores, 120 — Centro, Florianópolis</p>
+        <div class="rating" id="rating">★ 4.8</div>
+        <div class="chips" id="chips"></div>
+        <h3>Sobre o estacionamento</h3>
+        <p class="desc" id="description"></p>
+      </div>
+    </section>
+
+    <aside class="card booking">
+      <h2>Fazer reserva</h2>
+      <form id="bookingForm" novalidate>
+        <div class="field"><label for="date">Data da reserva</label><input type="date" id="date"></div>
+        <div class="field"><label for="time">Horário de entrada</label><input type="time" id="time"></div>
+        <div class="field">
+          <label for="hours">Tempo de permanência</label>
+          <select id="hours">
+            <option value="">Selecione</option>
+            <option value="1">1 hora</option>
+            <option value="2">2 horas</option>
+            <option value="3">3 horas</option>
+            <option value="4">4 horas</option>
+            <option value="6">6 horas</option>
+            <option value="8">8 horas</option>
+          </select>
+        </div>
+        <div class="summary">
+          <div class="row"><span>Valor por hora</span><span id="priceText">R$ 18,00</span></div>
+          <div class="row"><span>Duração</span><span id="durationText">—</span></div>
+          <div class="row total"><span>Total</span><span id="totalText">—</span></div>
+        </div>
+        <button class="btn" type="submit">Continuar para pagamento</button>
+        <div class="note">Reserva segura • Pagamento protegido</div>
+      </form>
+    </aside>
+  </div>
+</main>
+
+<script src="../../static/js/storage.js"></script>
+<script src="../../static/js/validation.js"></script>
+<script src="../../static/js/parkings.js"></script>
+<script src="parking.js"></script>
+</body>
+</html>

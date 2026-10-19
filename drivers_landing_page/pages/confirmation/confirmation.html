@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Reserva confirmada | E-Parking</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="confirmation.css">
+</head>
+<body>
+<header class="top"><div class="inner"><a class="brand" href="../../index.html">E-Parking</a><a class="back" href="../reservations/reservations.html">Minhas reservas →</a></div></header>
+
+<main class="wrap">
+  <section class="card" id="reservationCard">
+    <div class="check">✓</div>
+    <h1>Reserva confirmada!</h1>
+    <div class="sub">Sua vaga foi reservada com sucesso. Apresente o QR Code ao chegar ao estacionamento.</div>
+    <div class="code">Código da reserva: <span id="code">—</span></div>
+
+    <div class="details">
+      <div class="qr" aria-label="QR Code da reserva"></div>
+      <div class="box">
+        <h2>Detalhes da reserva</h2>
+        <div class="row"><span>Estacionamento</span><b id="parkingName">—</b></div>
+        <div class="row"><span>Endereço</span><b id="address">—</b></div>
+        <div class="row"><span>Data</span><b id="date">—</b></div>
+        <div class="row"><span>Horário</span><b id="time">—</b></div>
+        <div class="row"><span>Duração</span><b id="hours">—</b></div>
+        <div class="row"><span>Pagamento</span><b id="payment">—</b></div>
+        <div class="paid"><span id="totalLabel">Total pago</span><b id="total">—</b></div>
+      </div>
+    </div>
+
+    <div class="note"><b>Ao chegar ao estacionamento</b><p>Apresente o QR Code ou informe o código da reserva na entrada. A equipe do estacionamento poderá confirmar sua reserva.</p></div>
+    <div class="actions"><a class="btn dark" href="../../index.html">Voltar para início</a><a class="btn outline" href="../reservations/reservations.html">Minhas reservas</a></div>
+  </section>
+
+  <section class="card" id="notFound" hidden>
+    <h1>Reserva não encontrada</h1>
+    <div class="sub">Essa reserva não existe ou foi cancelada.</div>
+    <div class="actions"><a class="btn dark" href="../../index.html#buscar">Buscar vaga</a><a class="btn outline" href="../reservations/reservations.html">Minhas reservas</a></div>
+  </section>
+</main>
+
+<script src="../../static/js/storage.js"></script>
+<script src="confirmation.js"></script>
+</body>
+</html>
